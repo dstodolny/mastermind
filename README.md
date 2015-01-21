@@ -54,6 +54,7 @@ Methods:
 - solicid_move
 - game_over_message
 - correct?
+- give_feedback
 
 #### Code
 Attributes:
