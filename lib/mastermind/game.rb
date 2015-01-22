@@ -12,15 +12,17 @@ module Mastermind
       loop do
         code_to_try = @code_breaker.get_code
         if code_to_try == code_to_guess
-          puts "Congratulations! You've broke the code."
+          puts "#{code_to_try} | match: 4, almost: 0"
+          puts "Congratulations! You've broke the code in #{turns} turns."
           break
         elsif turns == 12
           puts "You've failed. The correct code is #{code_to_guess}."
           break
         else
           feedback = compare_codes(code_to_guess, code_to_try)
-          puts "match: #{feedback[:match]}, almost: #{feedback[:almost]}"
-          puts '-------------------'
+          @code_breaker.log(code_to_try, feedback)
+          puts "#{code_to_try} | match: #{feedback[:match]}, almost: #{feedback[:almost]}"
+          puts '--------------------------'
           turns += 1
         end
       end

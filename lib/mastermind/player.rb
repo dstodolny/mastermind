@@ -1,13 +1,17 @@
 module Mastermind
   class Player
-    attr_accessor :code
-    attr_reader :name
+    attr_accessor :code, :from_numbers, :code_numbers
+    attr_reader :name, :guess_log
 
     def initialize(name)
       @name = name
+      @guess_log = []
+      @from_numbers = ("1".."8").to_a
+      @code_numbers = []
     end
 
     def make_code
+      puts "Choose your secret code."
       @code = get_code
     end
 
@@ -22,6 +26,10 @@ module Mastermind
           return code
         end
       end
+    end
+
+    def log(code, feedback)
+      guess_log << [code, feedback]
     end
 
     private
