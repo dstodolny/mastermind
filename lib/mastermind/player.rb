@@ -5,7 +5,6 @@ module Mastermind
 
     def initialize(name)
       @name = name
-      @points = 0
     end
 
     def make_code

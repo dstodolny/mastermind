@@ -4,6 +4,10 @@ module Mastermind
       @code = random_code
     end
 
+    def get_code
+      random_code
+    end
+
     private
 
     def random_code
