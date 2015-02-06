@@ -63,3 +63,6 @@ Attributes:
 Methods:
 + compare
 - evaluate
+
+Bug:
+For 7778, 8867 -> match: 0, almost: 4
