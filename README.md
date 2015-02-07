@@ -1,5 +1,11 @@
 # Mastermind
 
+This is a clone of mastermind written for [The Odin Project](http://www.theodinproject.com/ruby-programming/oop). There is a bug in checking for the correct code as 8867 returns match: 0, almost: 4 for the correnct one: 7778. I had implemented simple artificial intelligence which is trying to guess the code
+
+I was also learning principles of object oriented design and below you can find my thinking process.
+
+
+
 ## Object oriented analysis and design processes:
 1. Gather your *Requirements*
 2. *Describe* the app
@@ -63,6 +69,3 @@ Attributes:
 Methods:
 + compare
 - evaluate
-
-Bug:
-For 7778, 8867 -> match: 0, almost: 4
